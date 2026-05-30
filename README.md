@@ -93,7 +93,7 @@ cp .env.local.example .env
 DATABASE_URL=postgresql://postgres:ВАШ_ПАРОЛЬ@localhost:5432/hr_assistant
 
 # NextAuth (любая случайная строка от 32 символов)
-NEXTAUTH_SECRET=ваш_случайный_секрет_минимум_32_символа
+NEXTAUTH_SECRET=любая_случайная_строка_от_32_символов
 NEXTAUTH_URL=http://localhost:3000
 
 # --- Вариант 1: Ollama (по умолчанию, ключ не нужен) ---
