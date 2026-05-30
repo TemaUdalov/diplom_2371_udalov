@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface: 255 255 255;
+    --surface-raised: 249 250 251;
+    --surface-overlay: 243 244 246;
+    --accent: 139 92 246;
+    --accent-soft: 139 92 246;
+  }
+
+  .dark {
+    --surface: 10 10 14;
+    --surface-raised: 18 18 24;
+    --surface-overlay: 26 26 34;
+    --accent: 196 167 125;
+    --accent-soft: 196 167 125;
+  }
+
+  body {
+    @apply bg-surface text-gray-900 dark:text-gray-100 antialiased;
+    transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                color 0.3s ease;
+  }
+
+  /* Smooth scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(128, 128, 128, 0.2) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.2);
+    border-radius: 3px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.35);
+  }
+
+  ::selection {
+    @apply bg-violet-500/20 dark:bg-amber-500/20;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/60 dark:bg-white/[0.03] backdrop-blur-2xl border border-gray-200/60 dark:border-white/[0.06];
+  }
+
+  .glass-strong {
+    @apply bg-white/80 dark:bg-white/[0.05] backdrop-blur-3xl border border-gray-200/70 dark:border-white/[0.08];
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 40px -8px rgba(139, 92, 246, 0.3);
+  }
+
+  .dark .glow-accent {
+    box-shadow: 0 0 40px -8px rgba(196, 167, 125, 0.2);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 dark:from-amber-200 dark:via-yellow-200 dark:to-orange-200;
+  }
+
+}
