@@ -29,8 +29,8 @@
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone https://github.com/TemaUdalov/HRWebsite.git
-cd HRWebsite
+git clone https://github.com/TemaUdalov/diplom_2371_udalov.git
+cd diplom_2371_udalov
 ```
 
 ### 2. Установить зависимости
